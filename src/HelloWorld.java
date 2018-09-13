@@ -1,6 +1,6 @@
 public class HelloWorld {
     public static void main (String args[]){
         System.out.println("HEllO WORLD");
-        //my nanme is jason
+        //my name is jason
     }
 }
