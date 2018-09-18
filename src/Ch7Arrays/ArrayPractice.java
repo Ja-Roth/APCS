@@ -1,5 +1,6 @@
+package Ch7Arrays;
 
-    import java.util.Arrays;
+import java.util.Arrays;
 
     public class ArrayPractice {
         public static void main(String[] args){
