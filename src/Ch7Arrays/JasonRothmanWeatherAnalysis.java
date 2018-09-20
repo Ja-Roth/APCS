@@ -3,7 +3,7 @@ package Ch7Arrays;
 
 import java.util.Scanner;
 
-public class WeatherAnalysis {
+public class JasonRothmanWeatherAnalysis {
     public static void main(String[] args){
         //This program calculates the average temperature for N days
         // Identifies how many days are above the average
@@ -50,7 +50,7 @@ public class WeatherAnalysis {
             System.out.println(larger + " days were above average.");
     }
         else{
-            System.out.println(larger + " day were above average.");
+            System.out.println("1 day was above average.");
         }
 
     }
