@@ -12,6 +12,7 @@ public class WeatherAnalysis {
 
     }
     public static void userInput(){
+        int x=0;
         //Step 1 : Ask how many days
         System.out.print("How many days' temperatures? ");
         Scanner sc = new Scanner(System.in);
@@ -26,6 +27,7 @@ public class WeatherAnalysis {
             int x =sc.nextInt();
             numbers[i-1] = x;
             sum +=x;
+
 
         }
         double avg = (double)sum/n;
