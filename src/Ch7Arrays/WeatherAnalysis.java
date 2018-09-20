@@ -1,18 +1,18 @@
 package Ch7Arrays;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+
 import java.util.Scanner;
 
 public class WeatherAnalysis {
     public static void main(String[] args){
         //This program calculates the average temperature for N days
         // Identifies how many days are above the average
+        //Call the method to do it
         userInput();
 
     }
     public static void userInput(){
-        int x=0;
+
         //Step 1 : Ask how many days
         System.out.print("How many days' temperatures? ");
         Scanner sc = new Scanner(System.in);
@@ -31,18 +31,14 @@ public class WeatherAnalysis {
 
         }
         double avg = (double)sum/n;
-        System.out.println("Average temp = " + round(avg));
+        avg = (Math.round(avg * 10.0)) / 10.0;
+        System.out.println("Average temp = " + avg);
         aboveAverage(avg, numbers, n);
 
 
 
     }
-    public static double round(double value) {
 
-        BigDecimal bd = new BigDecimal(Double.toString(value));
-        bd = bd.setScale(1, RoundingMode.HALF_UP);
-        return bd.doubleValue();
-    }
     public static void aboveAverage(double avg, int[] array, int n) {
         int larger = 0;
         for (int i = 1; i <= n; i++) {
