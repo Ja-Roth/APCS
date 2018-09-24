@@ -21,7 +21,7 @@ public class JasonRothmanWeatherAnalysis {
         int[] numbers = new int[n];
         // Step 3 : add the numbers
         int sum=0;
-
+        //Forloop for adding numbers to the array
         for (int i = 1; i<=n; i++){
             System.out.print("Day "+i+"'s high temp:");
             int x =sc.nextInt();
@@ -30,6 +30,7 @@ public class JasonRothmanWeatherAnalysis {
 
 
         }
+        //calculates the average than rounds it and prints it.
         double avg = (double)sum/n;
         avg = (Math.round(avg * 10.0)) / 10.0;
         System.out.println("Average temp = " + avg);
@@ -38,7 +39,7 @@ public class JasonRothmanWeatherAnalysis {
 
 
     }
-
+        //Method to find which are above average
     public static void aboveAverage(double avg, int[] array, int n) {
         int larger = 0;
         for (int i = 1; i <= n; i++) {
@@ -49,6 +50,7 @@ public class JasonRothmanWeatherAnalysis {
         if (larger > 1){
             System.out.println(larger + " days were above average.");
     }
+    // It bothered me that it would say 1 days, so i put this.
         else{
             System.out.println("1 day was above average.");
         }
