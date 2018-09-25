@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import static java.util.Arrays.sort;
 
-public class JasonRothmanWeatherAnalysisV2 {
+public class JasonRothmanWeatherAnalysis2 {
     public static void main(String[] args){
         //This program calculates the average temperature for N days
         // Identifies how many days are above the average
@@ -66,8 +66,11 @@ public class JasonRothmanWeatherAnalysisV2 {
 
     }
     public static void smallandlarge(int[] elements, int n) {
+        //sorts all of the ints from small to large
         sort(elements);
+        //print the first number which is index 0 than prints the second which is index 1
         System.out.println("Two coldest days: " + elements[0] +", "+ elements[1]);
+        //prints the largest number first than the second largest.
         System.out.println("Two hottest days: " + elements[n-1] +", "+ elements[n-2]);
 
 
