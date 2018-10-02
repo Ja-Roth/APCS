@@ -24,7 +24,7 @@ public class JasonRothmanWeatherAnalysis2 {
         int[] numbers = new int[n];
         // Step 3 : add the numbers
         int sum=0;
-        //Forloop for adding numbers to the array
+        //For loop for adding numbers to the array
         for (int i = 1; i<=n; i++){
             System.out.print("Day "+i+"'s high temp:");
             int x =sc.nextInt();
