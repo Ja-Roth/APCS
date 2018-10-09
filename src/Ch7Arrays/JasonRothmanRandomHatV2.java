@@ -18,7 +18,7 @@ public class JasonRothmanRandomHatV2 {
         }else{
            array = RandomizeArray(1,n);
         }
-        System.out.println(Arrays.toString(array));
+        divide(array);
 
 
 
@@ -43,5 +43,9 @@ public class JasonRothmanRandomHatV2 {
         return array;
 
     }
-   // public static void divide ()
+    public static void divide (int[] array){
+        for (int i =0;i<=array.length;i+=2){
+        System.out.println("Team" +array[i] +"Vs"+"Team" +array[i-1]);
+        }
+    }
     }
