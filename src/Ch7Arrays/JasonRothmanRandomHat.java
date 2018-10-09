@@ -12,18 +12,20 @@ public class JasonRothmanRandomHat {
         //implements random class
         Random rand = new Random();
         System.out.println("ROUND ONE:");
-        //for (int i = 0; i <= (copy.length) / 2 - 1; i++) {
-            int x =0;
-            int y =0;
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i <= (copy.length) / 2 - 1; i++) {
+
             do {
                 x = rand.nextInt(teams.length) + 1;
-                teams[x] = 0;
-                y = rand.nextInt(teams.length) + 1;
-                teams[y] = 0;
-                System.out.println("Team " + teams[x] + " VS Team " + teams[y]);
-            } while(teams[x] != 0 && teams[y] != 0);
 
+                y= rand.nextInt(teams.length) + 1;
+                System.out.println("Team " + teams[x-1] + " VS Team " + teams[y-1]);
+
+            } while(teams[x-1] != 0 && teams[y-1] != 0);
+            teams[x-1] = 0;
+            teams[y-1] = 0;
         }
 
         }
- //   }
+    }
