@@ -22,6 +22,9 @@ import java.util.Arrays;
 
 
         }
+        public static void mode(int[] array){
+
+        }
     }
 
 
