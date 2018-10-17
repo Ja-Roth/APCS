@@ -1,8 +1,13 @@
 package Ch7Arrays;
 
+import java.util.Scanner;
+
 public class JasonRothmanMode {
     public static void main(String[] args){
-        System.out.println("The mode is " + mode(66002123));
+        Scanner sc = new Scanner(System.in);
+        System.out.print("What number do you want to find the mode of:");
+        int number = sc.nextInt();
+        System.out.println("The mode is " + mode(number));
 
     }public static int mode(int num) {
         int[] array = new int[10];
