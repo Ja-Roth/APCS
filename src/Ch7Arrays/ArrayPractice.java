@@ -21,22 +21,27 @@ import java.util.Arrays;
             int[] numbers2 ={1,2,3,4,5};
             System.out.println(Arrays.toString(numbers2));
             */
-            System.out.println("The mode is " + mode(345322345));
+            System.out.println("The mode is " + mode2(33222));
 
         }
 
-        public static void mode2(int num) {
+        public static int mode2(int num) {
             int[] array = new int[10];
             while (num > 0) {
                 int test = num % 10;
                 array[test]++;
                 num /= 10;
             }
-            //System.out.println(Arrays.toString(array));
-            for (int i = 0; i <= 10; i++) {
-                int highest = array[0];
-
+            int max = array[0];
+            int index = 0;
+            for (int i = 0; i < array.length; i++) {
+                if (max < array[i]) {
+                    max = array[i];
+                    index = i;
+                }
             }
+            return index;
+
         }
 
         public static int mode(int num) {
