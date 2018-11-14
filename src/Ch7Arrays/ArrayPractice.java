@@ -21,7 +21,9 @@ import java.util.Arrays;
             int[] numbers2 ={1,2,3,4,5};
             System.out.println(Arrays.toString(numbers2));
             */
-            System.out.println("The mode is " + mode2(33222));
+            //System.out.println("The mode is " + mode2(33222));
+            String[] names = {"Jason","Nino","Roberta","Matt"};
+            names(names);
 
         }
 
@@ -104,6 +106,16 @@ import java.util.Arrays;
                 return 9;
             }
             return max-max;
+        }
+        public static void names(String[] array){
+            int x = 0;
+            String[] temp = new String[array.length];
+            for (int i = array.length-1;i>=0;i--){
+                temp[x] = array[i];
+                x++;
+            }
+            array = temp;
+            System.out.println(Arrays.toString(array));
         }
     }
 
