@@ -1,16 +1,33 @@
 //This class is a template to represent a point
 //on the cartesian coordinate
 package Ch8Classes;
+
 public class PointV1 {
     //state fields below (Variables)
     public int x;
     public int y;
 
     //Behaviors below (Methods)
-    public void translate(int x, int y){
+    public void translate(int dx, int dy){
+        x = x + dx;
+        y = y + dy;
 
     }
-    public void setLocation(int x, int y){
+    public void setLocation(int newX, int newY){
+        x = newX;
+        y = newY;
+
+    }
+    //Getter (accessor) method below
+    public double distance(PointV1 other){
+        int dx = x-other.x;
+        int dy = y-other.y;
+        double answer = Math.sqrt((dx*dx) + (dy * dy));
+        return answer;
+    }
+    public double distanceOrigin(){
+        double answer = Math.sqrt((x*x) + (y * y));
+        return answer;
 
     }
 }
