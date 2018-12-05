@@ -1,6 +1,6 @@
 package Ch8Classes;
 
-public class PointClientV3 {
+public class PointClientV4 {
     public static void main(String[] args) {
         //instantiate a point object called p1
         PointV3 p1 = new PointV3(3,6);

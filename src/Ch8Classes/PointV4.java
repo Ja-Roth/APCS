@@ -2,16 +2,16 @@
 //on the cartesian coordinate
 package Ch8Classes;
 
-public class PointV3 {
+public class PointV4 {
     //state fields below (Variables)
-    public int x;
-    public int y;
-    public PointV3(int initialX, int initialY){
+    private int x;
+    private int y;
+    public PointV4(int initialX, int initialY){
         x = initialX;
         y =initialY;
 
     }
-    public PointV3(){
+    public PointV4(){
         x =0;
         y =0;
     }
@@ -28,7 +28,7 @@ public class PointV3 {
 
     }
     //Getter (accessor) method below
-    public double distance(PointV3 other){
+    public double distance(PointV4 other){
         int dx = x-other.x;
         int dy = y-other.y;
         double answer = Math.sqrt((dx*dx) + (dy * dy));
