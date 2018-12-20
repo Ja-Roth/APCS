@@ -6,7 +6,11 @@ public class PointV4 {
     //state fields below (Variables)
     private int x;
     private int y;
+    //static fields reside at the class level Not the object level
+    private static int objcount;
+    //Constuctor
     public PointV4(int initialX, int initialY){
+        objcount++;
         x = initialX;
         y =initialY;
 
@@ -14,6 +18,14 @@ public class PointV4 {
     public PointV4(){
         x =0;
         y =0;
+    } public int getX(){
+        return x;
+    } public int getY(){
+        return y;
+    } public void setX(int x){
+        this.x=x;
+    } public void setY(int y){
+        this.y=y;
     }
 
     //Behaviors below (Methods)
@@ -42,6 +54,10 @@ public class PointV4 {
     // we are over riding the objects built in toString() method
     //to print the contents
    public String toString(){
-       return("(" + x +", " + y + ")");
+
+        return("(" + x +", " + y + ")");
+    }
+    public static int getObjcount(){
+        return objcount;
     }
 }
