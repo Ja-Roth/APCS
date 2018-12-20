@@ -16,7 +16,7 @@ public class BankAccountV2 {
         this.dob = dob;
         this.balance = balance;
         this.pin = pin;
-    }public BankAccountV2(String name, String SSN, String Adress, Dob dob){
+    }public BankAccountV2(String name, String SSN, Adress Adress, Dob dob){
         this.name = name;
         this.SSN = SSN;
         this.Adress = Adress;
@@ -26,9 +26,9 @@ public class BankAccountV2 {
         return name;
     } public String getSSN(){
         return SSN;
-    } public String getdob(){
+    } public Dob getdob(){
         return dob;
-    }public String Adress(){
+    }public Ch8Classes.Adress Adress(){
         return Adress;
     }
     public String toString(){
