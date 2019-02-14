@@ -14,7 +14,14 @@ public class vocabV1 {
         ArrayList<String> list2 = getWords(input2);
         System.out.println(list1);
         System.out.println(list2);
-        System.out.println(overlap(list1,list2));
+        ArrayList<String> common = getOverlap(list1,list2);
+        //System.out.println(stopWordDeleter());
+        double list1Percent = getPercentOverlap(common,list1);
+        double list2Percent = getPercentOverlap(common,list2);
+
+        System.out.println("Percent of list 1: "+list1Percent);
+        System.out.println("Percent of list 2: " +list2Percent);
+
     }
         //this method reads in all the data from an external file
         //applies case folding. arrayList is the sorted to
@@ -41,7 +48,9 @@ public class vocabV1 {
 
         return uniqueWords;
     }
-    public static ArrayList<String> overlap(ArrayList<String> list1,ArrayList<String> list2){
+
+
+    public static ArrayList<String> getOverlap(ArrayList<String> list1,ArrayList<String> list2){
         ArrayList<String> overlap = new ArrayList<>();
         int x = 0;
         int y = 0;
@@ -62,6 +71,21 @@ public class vocabV1 {
 
 
         return overlap;
+    }
+    public static double getPercentOverlap(ArrayList<String> common,ArrayList<String> list){
+        return ((double)common.size()/list.size()*100.0);
+    }
+
+
+    public static ArrayList<String> stopWordDeleter(ArrayList<String> finnsihed) throws FileNotFoundException{
+        Scanner input3 = new Scanner(new File("stop.txt"));
+        for(int i = 0;i<finnsihed.size();i++)
+            while(input3.hasNext()){
+                if(input3.next().equals(finnsihed.get(i))){
+                    finnsihed.remove(finnsihed.get(i));
+                }
+            }
+            return finnsihed;
     }
 
 }
