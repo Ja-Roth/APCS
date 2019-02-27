@@ -6,6 +6,9 @@ public class LawyerV3 extends EmployeeV3 {
     public LawyerV3(String name) {
         super(name);
     }
+    public LawyerV3(String name,int YOE){
+        super(name,YOE);
+    }
 
     //override the inherited methods from the employee class
     public int getVacationDays(){

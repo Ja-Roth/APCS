@@ -4,8 +4,21 @@ package Ch9Inheritance;
 public class EmployeeV3 {
     //state fields
     String name;
-    public EmployeeV3(String name){
+    int YOE = 0;
+    public  EmployeeV3(String name){
         this.name = name;
+    }
+    public EmployeeV3(String name,int YOE){
+        this.name = name;
+        this.YOE = YOE;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setYOE(int YOE) {
+        this.YOE = YOE;
     }
 
     public int getHours(){
@@ -20,5 +33,6 @@ public class EmployeeV3 {
     public String getVacactionForm(){
         return "yellow";    //use yellow form for leave
     }
+    public int getYOE(){ return YOE;}
+    }
 
-}

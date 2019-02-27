@@ -7,7 +7,10 @@ package Ch9Inheritance;
 
 public class MyLawFirmV3 {
     public static void main(String args[]){
-        EmployeeV3[] myEmployees = {new LegalSecretaryV3("Tom"), new MarketerV3("Jonny"),new LawyerV3("Henry")};
+        EmployeeV3[] myEmployees = {
+                new LegalSecretaryV3("Tom",15),
+                new MarketerV3("Jonny"),
+                new LawyerV3("Henry")};
 
         printInfo(myEmployees);
 
@@ -18,9 +21,11 @@ public class MyLawFirmV3 {
         //for each loop
         //data type  //iterator //container
         for(EmployeeV3 staff : employee){
+            System.out.println("name: " + staff.getName());
             System.out.println("salary: " + staff.getSalary());
             System.out.println("V. Days: " + staff.getVacationDays());
             System.out.println("V. Form: " + staff.getVacactionForm());
+            System.out.println("Years of experience: " +staff.getYOE());
             System.out.println();
         }
     }
