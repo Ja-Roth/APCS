@@ -1,23 +1,27 @@
 package Ch9Inheritance;
 
+import java.awt.desktop.SystemSleepEvent;
+
 public class shapeClientV2 {
     public static void main(String[] args){
-        ShapeV1[] shapes = {new Circle(5),
-                new Rectangle(8,11),
-                new Triangle(3,4,5)};
+        ShapeV2[] shapes = {new CircleV2(5),
+                new RectangleV2(8,11),
+                new TriangleV2(3,4,5)};
         //should print the area and perimeter of all the shapes
         shapeInfo(shapes);
-    }
-    public static void shapeInfo(ShapeV1[] shapes){
-        /*
-        for (int i = 0;i<shapes.length;i++){
-            System.out.println("Area: " + shapes[i].area());
-            System.out.println("Perimeter: " + shapes[i].perimeter() +"\n");
-
+        int answer=shapes[0].compareTo(shapes[1]);
+        if (answer>0){
+            System.out.println("Circle has the larger area");
+        } else if (answer<0){
+            System.out.println("Rectangle has the larger area");
+        } else {
+            System.out.println("They have the same area");
         }
-        */
+    }
+    public static void shapeInfo(ShapeV2[] shapes){
+
         // datatype var: shapes
-        for(ShapeV1 client : shapes ){
+        for(ShapeV2 client : shapes ){
             System.out.println("Area: " + client.area());
             System.out.println("Perimeter: " + client.perimeter() +"\n");
         }
