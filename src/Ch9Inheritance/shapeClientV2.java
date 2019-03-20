@@ -1,12 +1,11 @@
 package Ch9Inheritance;
 
-import java.awt.desktop.SystemSleepEvent;
 
 public class shapeClientV2 {
     public static void main(String[] args){
-        ShapeV2[] shapes = {new CircleV2(5),
-                new RectangleV2(8,11),
-                new TriangleV2(3,4,5)};
+        ShapeV2[] shapes = {new CircleV2(5,"Circle"),
+                new RectangleV2(8,11,"Rectangle"),
+                new TriangleV2(3,4,5,"Triangle")};
         //should print the area and perimeter of all the shapes
         shapeInfo(shapes);
         int answer=shapes[0].compareTo(shapes[1]);
@@ -22,6 +21,7 @@ public class shapeClientV2 {
 
         // datatype var: shapes
         for(ShapeV2 client : shapes ){
+            System.out.println("Name of Shape: " + client.getName());
             System.out.println("Area: " + client.area());
             System.out.println("Perimeter: " + client.perimeter() +"\n");
         }

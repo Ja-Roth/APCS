@@ -6,6 +6,7 @@ package Ch9Inheritance;
 public abstract class ShapeV2 implements Comparable {
     public abstract double area();
     public abstract double perimeter();
+    public abstract String getName();
 
     public int compareTo(Object o){
         if(o instanceof ShapeV2){
