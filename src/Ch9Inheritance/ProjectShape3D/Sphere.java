@@ -1,6 +1,6 @@
 package Ch9Inheritance.ProjectShape3D;
 
-public abstract class Sphere extends Rounded {
+public class Sphere extends Rounded {
 
 
     public Sphere(double radius) {

@@ -1,6 +1,6 @@
 package Ch9Inheritance.ProjectShape3D;
 
-public abstract class Cylinder extends Rounded {
+public class Cylinder extends Rounded {
 
 
     public Cylinder(double radius, double height, double height1, double radius1) {

@@ -1,6 +1,6 @@
 package Ch9Inheritance.ProjectShape3D;
 
-public abstract class Cone extends Rounded {
+public class Cone extends Rounded {
 
 
     public Cone(double radius, double height) {
